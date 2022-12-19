@@ -58,7 +58,17 @@ mybatis不再负责事务的管理，事务管理交给其他容器来负责，�
 
 重点：以后注意了，只要你的autoCommit是true,就表示没有开启事务，
 只有你的autoCommit是false的时候，就表示开启了事务
-
+7.关于mybati集成日志组件，让我们调试起来更加方便
+*mybatis常见的日志组件有哪些，slf4j  log4j  log4j2  STDOUT_LOGGING ...注意：log4j log4j2  logback 都是同一个作者开发的
+*其中STDOUT_LOGGING是标准日志，mybatis已经实现了这种标准日志，mybatis框架本身已经实现了这种标准，只要开启即可，怎么开启
+在mybatis-config.xml文件中使用settings标签配置开启的
+<settings>
+<setting name="logImpl" value="STDOUT_LOGGING">
+<settings>
+这个标签在编写的时候要注意，他应该出现在environment 标签之前，注意顺序，当然不需要记忆这个顺序
+因为dtd文件会进行约束，我们只要参考dtd约束即可
+这种实现也是可以的，可以看到一些信息，比如：连接对象什么时候创建，什么时候关闭，sql语句是怎么样的
+但是没有详细的日期，线程名字，等，如果想要丰富的配置，可以集成第三方log组件
 
 
 

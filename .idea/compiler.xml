@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="servelt01" />
-        <module name="mybatis" />
         <module name="mybatis-001" />
+        <module name="mybatis-002" />
+        <module name="mybatis" />
       </profile>
     </annotationProcessing>
   </component>

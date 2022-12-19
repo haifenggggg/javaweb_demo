@@ -12,6 +12,7 @@
         <module>servelt01</module>
         <module>mybatis</module>
         <module>mybatis/mybatis-001</module>
+        <module>mybatis/mybatis-002</module>
     </modules>
 
     <properties>

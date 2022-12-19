@@ -5,7 +5,7 @@
          version="4.0">
     <servlet>
         <servlet-name>sss</servlet-name>
-        <servlet-class>com.haifeng.demo1</servlet-class>
+        <servlet-class>com.haifeng.mybatisdemo.demo1</servlet-class>
 
     </servlet>
     <servlet-mapping>

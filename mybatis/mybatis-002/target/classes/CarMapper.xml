@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zar">
+  <insert id="abcd">
+      <!--insert into t_car(car_num,brand,guide_price,produce_time,car_type)
+    values (#{k1},#{k2},#{k3},#{k4},#{k5})-->
+      insert into t_car(car_num,brand,guide_price,produce_time,car_type)
+      values (#{car_num},#{brand},#{guide_price},#{produce_time},#{car_type})
+  </insert>
+    <delete id="qwer">
+        delete from t_car where id=#{id}
+    </delete>
+    <update id="qaz">
+        update t_car set car_num=#{car_num},brand=#{brand},guide_price=#{guide_price},produce_time=#{produce_time},car_type=#{car_type} where id=#{id}
+    </update>
+    <select id="ddd" resultType="com.haifeng.mybatis.pojo.Car">
+        select * from t_car where id=#{id}
+    </select>
+    <select id="qqq" resultType="com.haifeng.mybatis.pojo.Car">
+        select * from t_car
+    </select>
+</mapper>
